@@ -18,3 +18,4 @@ C:\Users\57304\Desktop\MIPROYECTO\PROCESO_CRUD\bin\Debug\EntityFramework.SqlServ
 C:\Users\57304\Desktop\MIPROYECTO\PROCESO_CRUD\bin\Debug\System.Data.SQLite.xml
 C:\Users\57304\Desktop\MIPROYECTO\PROCESO_CRUD\obj\Debug\PROCESO_CRUD.fmr_Panel.resources
 C:\Users\57304\Desktop\MIPROYECTO\PROCESO_CRUD\obj\Debug\PROCESO_.ADF05DC7.Up2Date
+C:\Users\57304\Desktop\MIPROYECTO\PROCESO_CRUD\bin\Debug\App.config

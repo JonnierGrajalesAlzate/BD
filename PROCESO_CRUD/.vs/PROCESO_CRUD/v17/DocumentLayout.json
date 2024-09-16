@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\57304\\Desktop\\MIPROYECTO\\PROCESO_CRUD\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{87BA743F-2DE8-461D-8931-D7AD82E2DA8E}|PROCESO_CRUD.csproj|c:\\users\\57304\\desktop\\miproyecto\\proceso_crud\\modelo\\persona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87BA743F-2DE8-461D-8931-D7AD82E2DA8E}|PROCESO_CRUD.csproj|solutionrelative:modelo\\persona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87BA743F-2DE8-461D-8931-D7AD82E2DA8E}|PROCESO_CRUD.csproj|C:\\Users\\57304\\Desktop\\MIPROYECTO\\PROCESO_CRUD\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{87BA743F-2DE8-461D-8931-D7AD82E2DA8E}|PROCESO_CRUD.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{87BA743F-2DE8-461D-8931-D7AD82E2DA8E}|PROCESO_CRUD.csproj|C:\\Users\\57304\\Desktop\\MIPROYECTO\\PROCESO_CRUD\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{87BA743F-2DE8-461D-8931-D7AD82E2DA8E}|PROCESO_CRUD.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{87BA743F-2DE8-461D-8931-D7AD82E2DA8E}|PROCESO_CRUD.csproj|C:\\Users\\57304\\Desktop\\MIPROYECTO\\PROCESO_CRUD\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87BA743F-2DE8-461D-8931-D7AD82E2DA8E}|PROCESO_CRUD.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{87BA743F-2DE8-461D-8931-D7AD82E2DA8E}|PROCESO_CRUD.csproj|c:\\users\\57304\\desktop\\miproyecto\\proceso_crud\\logica\\personalogica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87BA743F-2DE8-461D-8931-D7AD82E2DA8E}|PROCESO_CRUD.csproj|solutionrelative:logica\\personalogica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87BA743F-2DE8-461D-8931-D7AD82E2DA8E}|PROCESO_CRUD.csproj|c:\\users\\57304\\desktop\\miproyecto\\proceso_crud\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{87BA743F-2DE8-461D-8931-D7AD82E2DA8E}|PROCESO_CRUD.csproj|solutionrelative:app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87BA743F-2DE8-461D-8931-D7AD82E2DA8E}|PROCESO_CRUD.csproj|C:\\Users\\57304\\Desktop\\MIPROYECTO\\PROCESO_CRUD\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{87BA743F-2DE8-461D-8931-D7AD82E2DA8E}|PROCESO_CRUD.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,55 +26,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Persona.cs",
-              "DocumentMoniker": "C:\\Users\\57304\\Desktop\\MIPROYECTO\\PROCESO_CRUD\\Modelo\\Persona.cs",
-              "RelativeDocumentMoniker": "Modelo\\Persona.cs",
-              "ToolTip": "C:\\Users\\57304\\Desktop\\MIPROYECTO\\PROCESO_CRUD\\Modelo\\Persona.cs",
-              "RelativeToolTip": "Modelo\\Persona.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAzAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-15T23:23:20.351Z",
+              "DocumentIndex": 2,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\57304\\Desktop\\MIPROYECTO\\PROCESO_CRUD\\App.config",
+              "RelativeDocumentMoniker": "App.config",
+              "ToolTip": "C:\\Users\\57304\\Desktop\\MIPROYECTO\\PROCESO_CRUD\\App.config",
+              "RelativeToolTip": "App.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-09-16T18:32:01.766Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\57304\\Desktop\\MIPROYECTO\\PROCESO_CRUD\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\57304\\Desktop\\MIPROYECTO\\PROCESO_CRUD\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAWAAAA",
+              "DocumentIndex": 1,
+              "Title": "PersonaLogica.cs",
+              "DocumentMoniker": "C:\\Users\\57304\\Desktop\\MIPROYECTO\\PROCESO_CRUD\\Logica\\PersonaLogica.cs",
+              "RelativeDocumentMoniker": "Logica\\PersonaLogica.cs",
+              "ToolTip": "C:\\Users\\57304\\Desktop\\MIPROYECTO\\PROCESO_CRUD\\Logica\\PersonaLogica.cs",
+              "RelativeToolTip": "Logica\\PersonaLogica.cs",
+              "ViewState": "AQIAAEAAAAAAAAAAAAAAAA8AAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-15T22:47:54.176Z"
+              "WhenOpened": "2024-09-16T17:21:55.247Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\57304\\Desktop\\MIPROYECTO\\PROCESO_CRUD\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "C:\\Users\\57304\\Desktop\\MIPROYECTO\\PROCESO_CRUD\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAvwBIAAAAAAAAA",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAACgAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-15T23:03:25.296Z"
+              "WhenOpened": "2024-09-15T23:03:25.296Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Form1.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\57304\\Desktop\\MIPROYECTO\\PROCESO_CRUD\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "C:\\Users\\57304\\Desktop\\MIPROYECTO\\PROCESO_CRUD\\Form1.cs [Dise\u00F1o]",
               "RelativeToolTip": "Form1.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-15T22:30:35.748Z"
+              "WhenOpened": "2024-09-15T22:30:35.748Z",
+              "EditorCaption": " [Dise\u00F1o]"
             }
           ]
         }
