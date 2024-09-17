@@ -57,6 +57,28 @@ namespace PROCESO_CRUD
 
         private void fmr_Panel_Load(object sender, EventArgs e)
         {
+            dgvPersonas.AutoGenerateColumns = false; 
+            dgvPersonas.Columns.Add(new DataGridViewTextBoxColumn()
+            {
+                Name = "pnCedulaPersona",          
+                HeaderText = "id",       
+                DataPropertyName = "pnIdPersona" 
+            });
+
+            dgvPersonas.Columns.Add(new DataGridViewTextBoxColumn()
+            {
+                Name = "pcNombrePersona",
+                HeaderText = "Nombre",
+                DataPropertyName = "pcNombrePersona"
+            });
+
+            dgvPersonas.Columns.Add(new DataGridViewTextBoxColumn()
+            {
+                Name = "pnSueldoPersona",
+                HeaderText = "Sueldo",
+                DataPropertyName = "pnSueldoPersona"
+            });
+
             mostrar_personas();
         }
 
