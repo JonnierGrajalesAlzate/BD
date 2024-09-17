@@ -31,7 +31,7 @@ namespace PROCESO_CRUD.Logica
                 try
                 {
                     conexion.Open();
-                    string query = "INSERT INTO Persona (nombre, sueldo) VALUES (@nombre, @sueldo)";
+                    string query = "insert into Persona (nombre, sueldo) values (@nombre, @sueldo)";
                     SQLiteCommand cmd = new SQLiteCommand(query, conexion);
                     cmd.Parameters.Add(new SQLiteParameter("@nombre", obj.pcNombrePersona));
                     cmd.Parameters.Add(new SQLiteParameter("@sueldo", obj.pnSueldoPersona));
@@ -50,7 +50,66 @@ namespace PROCESO_CRUD.Logica
             }
 
             return respuesta;
-        } 
+        }
+
+        public bool Actualizar(Persona obj)
+        {
+            bool respuesta = true;
+
+            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            {
+                try
+                {
+                    conexion.Open(); 
+                    string query = "update Persona set nombre=@nombre, sueldo=@sueldo where id=@pnIdPersona";
+                    SQLiteCommand cmd = new SQLiteCommand(query, conexion); 
+                    cmd.Parameters.Add(new SQLiteParameter("@pnIdPersona", obj.pnIdPersona));
+                    cmd.Parameters.Add(new SQLiteParameter("@nombre", obj.pcNombrePersona));
+                    cmd.Parameters.Add(new SQLiteParameter("@sueldo", obj.pnSueldoPersona));
+                    cmd.CommandType = System.Data.CommandType.Text; 
+                    if (cmd.ExecuteNonQuery() < 1)
+                    {
+                        respuesta = false;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error al actualizar persona: {ex.Message}");
+                    respuesta = false;
+                }
+            }
+
+            return respuesta;
+        }
+
+        public bool Eliminar(Persona obj)
+        {
+            bool respuesta = true;
+
+            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            {
+                try
+                {
+                    conexion.Open();
+                    string query = "delete from Persona where id=@pnIdPersona";
+                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+                    cmd.Parameters.Add(new SQLiteParameter("@pnIdPersona", obj.pnIdPersona)); 
+                    cmd.CommandType = System.Data.CommandType.Text;
+
+                    if (cmd.ExecuteNonQuery() < 1)
+                    {
+                        respuesta = false;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error al eliminar persona: {ex.Message}");
+                    respuesta = false;
+                }
+            }
+
+            return respuesta;
+        }
         public List<Persona> Listar()
         {
             List<Persona> oLista = new List<Persona>();
@@ -60,7 +119,7 @@ namespace PROCESO_CRUD.Logica
                 try
                 {
                     conexion.Open();
-                    string query = "SELECT cedula, nombre, sueldo FROM Persona";
+                    string query = "SELECT id, nombre, sueldo FROM Persona";
                     SQLiteCommand cmd = new SQLiteCommand(query, conexion);
                     cmd.CommandType = System.Data.CommandType.Text;
 
@@ -69,20 +128,20 @@ namespace PROCESO_CRUD.Logica
                         while (dr.Read())
                         {
                             Persona persona = new Persona(); 
-                            if (dr["cedula"] != DBNull.Value && int.TryParse(dr["cedula"].ToString(), out int cedula))
+                            if (dr["id"] != DBNull.Value && int.TryParse(dr["id"].ToString(), out int lnId))
                             {
-                                persona.pnCedulaPersona = cedula;
+                                persona.pnIdPersona = lnId;
                             }
                             else
                             {
-                                persona.pnCedulaPersona = 0;  
+                                persona.pnIdPersona = 0;  
                             }
                              
                             persona.pcNombrePersona = dr["nombre"] != DBNull.Value ? dr["nombre"].ToString() : string.Empty;
                              
-                            if (dr["sueldo"] != DBNull.Value && double.TryParse(dr["sueldo"].ToString(), out double sueldo))
+                            if (dr["sueldo"] != DBNull.Value && double.TryParse(dr["sueldo"].ToString(), out double lnSueldo))
                             {
-                                persona.pnSueldoPersona = sueldo;
+                                persona.pnSueldoPersona = lnSueldo;
                             }
                             else
                             {

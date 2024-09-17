@@ -12,7 +12,7 @@ using PROCESO_CRUD.Logica;
 
 /*Jonnier Grajales Alzate
  16/09/2024
-BaseDeDatos
+BaseDeDatos CRUD con Sqlite
  */
 
 namespace PROCESO_CRUD
@@ -29,7 +29,7 @@ namespace PROCESO_CRUD
             Persona objeto = new Persona()
             { 
                 pcNombrePersona = txtNombre.Text,
-                pnSueldoPersona = int.Parse(txtSueldo.Text)
+                pnSueldoPersona = double.Parse(txtSueldo.Text)
             };
 
             bool respuesta = PersonaLogica.Instacia.Guardar(objeto);
@@ -49,7 +49,7 @@ namespace PROCESO_CRUD
 
         public void limpiar()
         {
-            txtCedula.Text = "";
+            txtId.Text = "";
             txtNombre.Text = "";
             txtSueldo.Text = "";
             txtNombre.Focus();
@@ -58,6 +58,42 @@ namespace PROCESO_CRUD
         private void fmr_Panel_Load(object sender, EventArgs e)
         {
             mostrar_personas();
+        }
+
+         
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            Persona objeto = new Persona()
+            {
+                pnIdPersona = int.Parse(txtId.Text) 
+            };
+
+            bool respuesta = PersonaLogica.Instacia.Eliminar(objeto);
+
+            if (respuesta)
+            {
+                limpiar();
+                mostrar_personas();
+            }
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            Persona objeto = new Persona()
+            {
+                pnIdPersona = int.Parse(txtId.Text),
+                pcNombrePersona = txtNombre.Text,
+                pnSueldoPersona = double.Parse(txtSueldo.Text)
+            };
+
+            bool respuesta = PersonaLogica.Instacia.Actualizar(objeto);
+
+            if (respuesta)
+            {
+                limpiar();
+                mostrar_personas();
+            }
         }
     }
 }
