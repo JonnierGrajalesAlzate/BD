@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\57304\\Desktop\\MIPROYECTO\\PROCESO_CRUD\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{87BA743F-2DE8-461D-8931-D7AD82E2DA8E}|PROCESO_CRUD.csproj|c:\\users\\57304\\desktop\\miproyecto\\proceso_crud\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87BA743F-2DE8-461D-8931-D7AD82E2DA8E}|PROCESO_CRUD.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87BA743F-2DE8-461D-8931-D7AD82E2DA8E}|PROCESO_CRUD.csproj|c:\\users\\57304\\desktop\\miproyecto\\proceso_crud\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{87BA743F-2DE8-461D-8931-D7AD82E2DA8E}|PROCESO_CRUD.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87BA743F-2DE8-461D-8931-D7AD82E2DA8E}|PROCESO_CRUD.csproj|c:\\users\\57304\\desktop\\miproyecto\\proceso_crud\\modelo\\persona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87BA743F-2DE8-461D-8931-D7AD82E2DA8E}|PROCESO_CRUD.csproj|solutionrelative:modelo\\persona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{87BA743F-2DE8-461D-8931-D7AD82E2DA8E}|PROCESO_CRUD.csproj|c:\\users\\57304\\desktop\\miproyecto\\proceso_crud\\logica\\personalogica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{87BA743F-2DE8-461D-8931-D7AD82E2DA8E}|PROCESO_CRUD.csproj|solutionrelative:logica\\personalogica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -19,12 +31,51 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\57304\\Desktop\\MIPROYECTO\\PROCESO_CRUD\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\57304\\Desktop\\MIPROYECTO\\PROCESO_CRUD\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T16:44:51.682Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\57304\\Desktop\\MIPROYECTO\\PROCESO_CRUD\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\57304\\Desktop\\MIPROYECTO\\PROCESO_CRUD\\Form1.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Form1.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T16:44:45.527Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Persona.cs",
+              "DocumentMoniker": "C:\\Users\\57304\\Desktop\\MIPROYECTO\\PROCESO_CRUD\\Modelo\\Persona.cs",
+              "RelativeDocumentMoniker": "Modelo\\Persona.cs",
+              "ToolTip": "C:\\Users\\57304\\Desktop\\MIPROYECTO\\PROCESO_CRUD\\Modelo\\Persona.cs",
+              "RelativeToolTip": "Modelo\\Persona.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T16:44:22.053Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "PersonaLogica.cs",
               "DocumentMoniker": "C:\\Users\\57304\\Desktop\\MIPROYECTO\\PROCESO_CRUD\\Logica\\PersonaLogica.cs",
               "RelativeDocumentMoniker": "Logica\\PersonaLogica.cs",
               "ToolTip": "C:\\Users\\57304\\Desktop\\MIPROYECTO\\PROCESO_CRUD\\Logica\\PersonaLogica.cs",
               "RelativeToolTip": "Logica\\PersonaLogica.cs",
-              "ViewState": "AQIAAJEAAAAAAAAAAAAAAJ0AAAARAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-17T14:33:29.338Z",
               "EditorCaption": ""

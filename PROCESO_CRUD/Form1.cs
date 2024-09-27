@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using PROCESO_CRUD.Logica;
 using PROCESO_CRUD.Modelo;
-using PROCESO_CRUD.Logica;
+using System;
+using System.Windows.Forms;
 
 /*Jonnier Grajales Alzate
  16/09/2024
@@ -26,15 +19,15 @@ namespace PROCESO_CRUD
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            Persona objeto = new Persona()
+            Persona oPersona = new Persona()
             { 
                 pcNombrePersona = txtNombre.Text,
                 pnSueldoPersona = double.Parse(txtSueldo.Text)
             };
 
-            bool respuesta = PersonaLogica.Instacia.Guardar(objeto);
+            bool llRespuesta = PersonaLogica.Instacia.Guardar(oPersona);
 
-            if (respuesta)
+            if (llRespuesta)
             {
                 limpiar();
                 mostrar_personas();
@@ -86,14 +79,14 @@ namespace PROCESO_CRUD
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            Persona objeto = new Persona()
+            Persona oPersona = new Persona()
             {
                 pnIdPersona = int.Parse(txtId.Text) 
             };
 
-            bool respuesta = PersonaLogica.Instacia.Eliminar(objeto);
+            bool llRespuesta = PersonaLogica.Instacia.Eliminar(oPersona);
 
-            if (respuesta)
+            if (llRespuesta)
             {
                 limpiar();
                 mostrar_personas();
@@ -102,16 +95,16 @@ namespace PROCESO_CRUD
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            Persona objeto = new Persona()
+            Persona oPersona = new Persona()
             {
                 pnIdPersona = int.Parse(txtId.Text),
                 pcNombrePersona = txtNombre.Text,
                 pnSueldoPersona = double.Parse(txtSueldo.Text)
             };
 
-            bool respuesta = PersonaLogica.Instacia.Actualizar(objeto);
+            bool llRespuesta = PersonaLogica.Instacia.Actualizar(oPersona);
 
-            if (respuesta)
+            if (llRespuesta)
             {
                 limpiar();
                 mostrar_personas();

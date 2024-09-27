@@ -1,14 +1,15 @@
-﻿using System;
+﻿using PROCESO_CRUD.Modelo;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SQLite;
-using PROCESO_CRUD.Modelo;
+using System.Windows.Forms;
 
 namespace PROCESO_CRUD.Logica
 {
     public class PersonaLogica
     {
-        private static string cadena = ConfigurationManager.ConnectionStrings["cadena"].ConnectionString;
+        private static string lcCadena = ConfigurationManager.ConnectionStrings["cadena"].ConnectionString;
         private static PersonaLogica instancia = null; 
         private PersonaLogica() { } 
         public static PersonaLogica Instacia
@@ -24,106 +25,106 @@ namespace PROCESO_CRUD.Logica
         } 
         public bool Guardar(Persona obj)
         {
-            bool respuesta = true;
+            bool llRespuesta = true;
 
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            using (SQLiteConnection Oconexion = new SQLiteConnection(lcCadena))
             {
                 try
                 {
-                    conexion.Open();
-                    string query = "insert into Persona (nombre, sueldo) values (@nombre, @sueldo)";
-                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
-                    cmd.Parameters.Add(new SQLiteParameter("@nombre", obj.pcNombrePersona));
-                    cmd.Parameters.Add(new SQLiteParameter("@sueldo", obj.pnSueldoPersona));
-                    cmd.CommandType = System.Data.CommandType.Text;
+                    Oconexion.Open();
+                    string lcQuery = "insert into Persona (nombre, sueldo) values (@nombre, @sueldo)";
+                    SQLiteCommand Ocmd = new SQLiteCommand(lcQuery, Oconexion);
+                    Ocmd.Parameters.Add(new SQLiteParameter("@nombre", obj.pcNombrePersona));
+                    Ocmd.Parameters.Add(new SQLiteParameter("@sueldo", obj.pnSueldoPersona));
+                    Ocmd.CommandType = System.Data.CommandType.Text;
 
-                    if (cmd.ExecuteNonQuery() < 1)
+                    if (Ocmd.ExecuteNonQuery() < 1)
                     {
-                        respuesta = false;
+                        llRespuesta = false;
                     }
                 }
                 catch (Exception ex)
                 { 
-                    Console.WriteLine($"Error al guardar persona: {ex.Message}");
-                    respuesta = false;
+                    MessageBox.Show($"Error al guardar persona: {ex.Message}");
+                    llRespuesta = false;
                 }
             }
 
-            return respuesta;
+            return llRespuesta;
         }
 
         public bool Actualizar(Persona obj)
         {
-            bool respuesta = true;
+            bool llRespuesta = true;
 
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            using (SQLiteConnection Oconexion = new SQLiteConnection(lcCadena))
             {
                 try
                 {
-                    conexion.Open(); 
-                    string query = "update Persona set nombre=@nombre, sueldo=@sueldo where id=@pnIdPersona";
-                    SQLiteCommand cmd = new SQLiteCommand(query, conexion); 
-                    cmd.Parameters.Add(new SQLiteParameter("@pnIdPersona", obj.pnIdPersona));
-                    cmd.Parameters.Add(new SQLiteParameter("@nombre", obj.pcNombrePersona));
-                    cmd.Parameters.Add(new SQLiteParameter("@sueldo", obj.pnSueldoPersona));
-                    cmd.CommandType = System.Data.CommandType.Text; 
-                    if (cmd.ExecuteNonQuery() < 1)
+                    Oconexion.Open(); 
+                    string lcQuery = "update Persona set nombre=@nombre, sueldo=@sueldo where id=@pnIdPersona";
+                    SQLiteCommand Ocmd = new SQLiteCommand(lcQuery, Oconexion); 
+                    Ocmd.Parameters.Add(new SQLiteParameter("@pnIdPersona", obj.pnIdPersona));
+                    Ocmd.Parameters.Add(new SQLiteParameter("@nombre", obj.pcNombrePersona));
+                    Ocmd.Parameters.Add(new SQLiteParameter("@sueldo", obj.pnSueldoPersona));
+                    Ocmd.CommandType = System.Data.CommandType.Text; 
+                    if (Ocmd.ExecuteNonQuery() < 1)
                     {
-                        respuesta = false;
+                        llRespuesta = false;
                     }
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine($"Error al actualizar persona: {ex.Message}");
-                    respuesta = false;
+                    llRespuesta = false;
                 }
             }
 
-            return respuesta;
+            return llRespuesta;
         }
 
         public bool Eliminar(Persona obj)
         {
-            bool respuesta = true;
+            bool llRespuesta = true;
 
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            using (SQLiteConnection Oconexion = new SQLiteConnection(lcCadena))
             {
                 try
                 {
-                    conexion.Open();
-                    string query = "delete from Persona where id=@pnIdPersona";
-                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
-                    cmd.Parameters.Add(new SQLiteParameter("@pnIdPersona", obj.pnIdPersona)); 
-                    cmd.CommandType = System.Data.CommandType.Text;
+                    Oconexion.Open();
+                    string lcQuery = "delete from Persona where id=@pnIdPersona";
+                    SQLiteCommand Ocmd = new SQLiteCommand(lcQuery, Oconexion);
+                    Ocmd.Parameters.Add(new SQLiteParameter("@pnIdPersona", obj.pnIdPersona)); 
+                    Ocmd.CommandType = System.Data.CommandType.Text;
 
-                    if (cmd.ExecuteNonQuery() < 1)
+                    if (Ocmd.ExecuteNonQuery() < 1)
                     {
-                        respuesta = false;
+                        llRespuesta = false;
                     }
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"Error al eliminar persona: {ex.Message}");
-                    respuesta = false;
+                    MessageBox.Show($"Error al eliminar persona: {ex.Message}");
+                    llRespuesta = false;
                 }
             }
 
-            return respuesta;
+            return llRespuesta;
         }
         public List<Persona> Listar()
         {
             List<Persona> oLista = new List<Persona>();
 
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            using (SQLiteConnection Oconexion = new SQLiteConnection(lcCadena))
             {
                 try
                 {
-                    conexion.Open();
-                    string query = "SELECT id, nombre, sueldo FROM Persona";
-                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
-                    cmd.CommandType = System.Data.CommandType.Text;
+                    Oconexion.Open();
+                    string lcQuery = "SELECT id, nombre, sueldo FROM Persona";
+                    SQLiteCommand Ocmd = new SQLiteCommand(lcQuery, Oconexion);
+                    Ocmd.CommandType = System.Data.CommandType.Text;
 
-                    using (SQLiteDataReader dr = cmd.ExecuteReader())
+                    using (SQLiteDataReader dr = Ocmd.ExecuteReader())
                     {
                         while (dr.Read())
                         {
@@ -154,7 +155,7 @@ namespace PROCESO_CRUD.Logica
                 }
                 catch (Exception ex)
                 { 
-                    Console.WriteLine($"Error al listar personas: {ex.Message}");
+                    MessageBox.Show($"Error al listar personas: {ex.Message}");
                 }
             }
 
